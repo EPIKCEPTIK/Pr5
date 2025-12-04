@@ -5,7 +5,7 @@ public class TestRecognizer {
         S, ONE, TWO, THREE, F
     }
 
-    public static State process(String input) {
+    public State process(String input) {
         var currentState = State.S;
 
         if (input == null) return State.S;

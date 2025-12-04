@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class TestRecognizerTest {
 
-
+    private final TestRecognizer recognizer = new TestRecognizer();
     @ParameterizedTest
     @CsvSource({
             "TEST,          F",
@@ -20,6 +20,6 @@ class TestRecognizerTest {
             "TE_TEST,       F",
     })
     void testLogic(String input, TestRecognizer.State expected) {
-        assertEquals(expected, TestRecognizer.process(input));
+        assertEquals(expected, recognizer.process(input));
     }
 }
